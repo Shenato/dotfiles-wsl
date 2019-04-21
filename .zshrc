@@ -31,7 +31,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 if [ -f ~/.ssh/agent.env ] ; then
   . ~/.ssh/agent.env > /dev/null
   if ! kill -0 $SSH_AGENT_PID > /dev/null 2>&1; then
