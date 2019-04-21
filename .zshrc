@@ -14,23 +14,27 @@ antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load theme
-# ZSH_THEME="robbyrussell"
 antigen theme agnoster
 
 antigen apply
+
+# User configuration
 
 alias tmux='tmux -2'
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# User configuration
+# Node
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="~/.nvm"
+eval [ -s "$NVM_DIR/nvm.sh" ] && eval \. "$NVM_DIR/nvm.sh"                    # nvm
+eval [ -s "$NVM_DIR/bash_completion" ] && eval \. "$NVM_DIR/bash_completion"  # nvm bash_completion
 
-# ssh
+# SSH
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 if [ -f ~/.ssh/agent.env ] ; then
   . ~/.ssh/agent.env > /dev/null
@@ -44,14 +48,10 @@ else
   eval `ssh-agent | tee ~/.ssh/agent.env`
   ssh-add
 fi
-# End Of SSH agent
-
-# Path to your oh-my-zsh installation.
-#export ZSH="/root/.oh-my-zsh"
-#source $ZSH/oh-my-zsh.sh
 
 # Custom shit
 source ~/.zsh_aliases
+
 # Change Username in shell (remove machine name)
 prompt_context() {  
 	if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; 
