@@ -21,7 +21,7 @@ My WSL Dotfiles
 - apt-get install build-essential 
 
 
-#Applications (Windows)
+# Applications (Windows)
 
 - Discord
 - Docker
