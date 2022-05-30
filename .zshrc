@@ -15,7 +15,6 @@ if ! zgen saved; then
 
   # Bundles from robbyrussel
   zgen oh-my-zsh plugins/git
-  zgen oh-my-zsh plugins/sudo
   zgen oh-my-zsh plugins/command-not-found
 
   # Syntax highlighting
@@ -40,14 +39,12 @@ alias tmux='tmux -2'
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/scripts:$PATH
+export PATH=~/.nvm/versions/node/v16.1.0/bin:$PATH # Default Node version
+
 # Node
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#export NVM_DIR="~/.nvm"
-#eval [ -s "$NVM_DIR/nvm.sh" ] && eval \. "$NVM_DIR/nvm.sh"                    # nvm
-#eval [ -s "$NVM_DIR/bash_completion" ] && eval \. "$NVM_DIR/bash_completion"  # nvm bash_completion
 
 # SSH
 export SSH_KEY_PATH="~/.ssh/rsa_id"
