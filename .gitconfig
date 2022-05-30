@@ -3,3 +3,9 @@
 # Please adapt and uncomment the following lines:
 	name = Shenato
 	email = urreaped@gmail.com
+[push]
+	default = simple
+[core]
+	editor = vim
+	autocrlf = false
+	eol = lf

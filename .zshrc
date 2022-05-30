@@ -1,30 +1,45 @@
 #zmodload zsh/zprof
 # Set up the prompt
-source ~/antigen.zsh
+source ~/.zgen/zgen.zsh
 #source ~/.bash_profile
 
+# Custom shit
+# source ~/.zsh_aliases
+
 # Load the oh my zsh
-antigen use oh-my-zsh
+if ! zgen saved; then
+  echo "Creating a zgen save"
 
-# Bundles from robbyrussel
-antigen bundle git
-antigen bundle command-not-found
+  # specify plugins here
+  zgen oh-my-zsh
 
-# Syntax highlighting
-antigen bundle zsh-users/zsh-syntax-highlighting
+  # Bundles from robbyrussel
+  zgen oh-my-zsh plugins/git
+  zgen oh-my-zsh plugins/sudo
+  zgen oh-my-zsh plugins/command-not-found
 
-# Load theme
-antigen theme agnoster
+  # Syntax highlighting
+  zgen load zsh-users/zsh-syntax-highlighting
 
-antigen apply
+  zgen load zsh-users/zsh-completions src
+
+  # Load theme
+  zgen oh-my-zsh themes/agnoster
+
+
+  # generate the init script from plugins above
+  zgen save
+fi
 
 # User configuration
+# Cypress config
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
 alias tmux='tmux -2'
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export PATH=$HOME/scripts:$PATH
 # Node
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -49,8 +64,6 @@ else
   ssh-add
 fi
 
-# Custom shit
-source ~/.zsh_aliases
 
 # Change Username in shell (remove machine name)
 prompt_context() {  
