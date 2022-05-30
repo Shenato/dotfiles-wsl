@@ -9,6 +9,10 @@ My WSL Dotfiles
 - nvm
 - https://github.com/powerline/fonts
 
+# shell packages
+- tig
+
+# programs
 - vscode
 - google-chrome
 - google-cloud-sdk
