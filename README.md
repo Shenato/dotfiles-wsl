@@ -7,7 +7,8 @@ My WSL Dotfiles
 - oh-my-zsh
 - antigen
 - nvm
-- https://github.com/powerline/fonts
+- [Powerline Fonts](https://github.com/powerline/fonts)
+  Specifically: [Meslo LG M Regular](https://github.com/powerline/fonts/blob/master/Meslo%20Slashed/Meslo%20LG%20M%20Regular%20for%20Powerline.ttf)
 
 # shell packages
 - tig
