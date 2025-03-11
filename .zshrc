@@ -43,8 +43,12 @@ alias tmux='tmux -2'
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$HOME/scripts:$PATH
+export PATH=$HOME/scripts:$PATH # Utiliy scripts
+export PATH=$HOME/.dotfiles/scripts:$PATH # Utility scripts
 export PATH=~/.nvm/versions/node/v16.1.0/bin:$PATH # Default Node version
+# PHP
+export PATH="/home/shenato/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/shenato/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
 # Node
 export NVM_DIR="$HOME/.nvm"
