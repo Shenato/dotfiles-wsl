@@ -36,7 +36,7 @@ fi
 if [[ $(uname -r) == (#s)*[mM]icrosoft*(#e) ]]; then
   echo WSL
   # Cypress config for opening display (ONLY FOR WSL)
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+  export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 fi
 
 alias tmux='tmux -2'
@@ -78,3 +78,12 @@ prompt_context() {
 	fi
 }
 #zprof
+
+# Aliases
+alias notebook="cd ~/repos/notebook-obsidian"
+
+# Bootup operations
+
+# Switch to current project node version
+nvm use default
+clear
