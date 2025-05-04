@@ -42,5 +42,9 @@ sudo gpasswd -a shenato plugdev
 sudo add-apt-repository ppa:openrazer/stable
 sudo add-apt-repository ppa:polychromatic/stable
 sudo apt update
-sudo apt install polychromatic
 # GUI app: polychromatic
+sudo apt install polychromatic
+
+# More software
+
+sudo apt install tig
