@@ -91,3 +91,6 @@ alias notebook="cd ~/core/notebook-obsidian"
 # Switch to current project node version
 nvm use default
 clear
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+. "/home/shenato/.deno/env"
