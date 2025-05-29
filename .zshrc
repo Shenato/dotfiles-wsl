@@ -4,6 +4,7 @@ source ~/.zgen/zgen.zsh
 #source ~/.bash_profile
 
 # Custom shit
+source ~/.zsh_autocomplete
 # source ~/.zsh_aliases
 
 # Load the oh my zsh

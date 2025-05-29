@@ -1,7 +1,10 @@
 #!/bin/bash
 
 ln -s -f ~/.dotfiles/.bashrc ~/.bashrc
+
 ln -s -f ~/.dotfiles/.zshrc ~/.zshrc
+ln -s -f ~/.dotfiles/.zsh_autocomplete ~/.zsh_autocomplete
+ln -s -f ~/.dotfiles/.zsh_aliases ~/.zsh_aliases
 
 ln -s -f ~/.dotfiles/scripts ~/scripts
 
