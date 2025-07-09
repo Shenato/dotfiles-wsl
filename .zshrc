@@ -4,6 +4,7 @@ source ~/.zgen/zgen.zsh
 #source ~/.bash_profile
 
 # Custom shit
+source ~/.zsh_autocomplete
 # source ~/.zsh_aliases
 
 # Load the oh my zsh
@@ -66,8 +67,12 @@ export PATH="/home/shenato/.local/bin:$PATH"
 
 # Node
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # SSH
 export SSH_KEY_PATH="~/.ssh/rsa_id"
@@ -94,7 +99,7 @@ prompt_context() {
 #zprof
 
 # Aliases
-alias notebook="cd ~/repos/notebook-obsidian"
+alias notebook="cd ~/core/notebook-obsidian"
 
 # Bootup operations
 export CHROME_PATH="/var/lib/flatpak/app/com.google.Chrome/x86_64/stable/active/export/bin/com.google.Chrome"
@@ -105,5 +110,8 @@ nvm use default
 clear
 
 # Homebrew
-. "$HOME/.local/bin/env"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+
+. "$HOME/.local/bin/env"
+. "/home/shenato/.deno/env"
